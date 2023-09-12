@@ -20,6 +20,10 @@ function submitData(userName, email) {
             document.querySelector("body").appendChild(p)
         })
         .catch((error) => {
-            document.querySelector("body").innerHTML = error.message;
+            let c = document.createElement('p');
+            c.textContent = error.message
+            document.querySelector("body").append(c)
         });
 }
+
+
